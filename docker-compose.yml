@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+        db:
+                image: mysql
+                command: --default-authentication-plugin=mysql_native_password
+                restart: always
+                environment:
+                        MYSQL_ROOT_PASSWORD: example
+                        TZ: Asia/Calcutta
+                ports:
+                        - 7000:3306
+                
+                volumes:
+                        - ./sql/sql_init:/docker-entrypoint-initdb.d
+                        - ./sql/sql_config:/etc/mysql/conf.d
+                networks:
+                        - app_network 
+        grafana:
+                 build: ./grafana/.
+                 ports:
+                         - 3000:3000
+                 networks:
+                         - app_network
+                 volumes:
+                         - ./grafana/dashboard:/etc/grafana/provisioning/dashboards/general
+                 depends_on:
+                         - db
+        camcont:
+                build: ./app/.
+                devices:
+                        - /dev/video0:/dev/video0
+                ports:
+                        - 5000:5000
+                volumes:
+                        - /tmp/.X11-unix:/tmp/.X11-unix
+                        - ./app:/usr/app
+                environment:
+                        DISPLAY: $DISPLAY
+                networks:
+                        - app_network
+                depends_on:
+                        - db
+
+
+networks:
+        app_network:
+                driver: "bridge"

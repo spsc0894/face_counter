@@ -73,11 +73,11 @@ Click on "Add Datasource" and select "MySQL"
 
 Provide the details as shown in below screenshot:
 
-Name: BOOKINFO
-HOST: db:3306
-Database: BOOKINFO
-User: surya
-password: admin
+Name: BOOKINFO<br>
+HOST: db:3306<br>
+Database: BOOKINFO<br>
+User: surya<br>
+password: admin<br>
 
 
 ![Grafana MySQL Details](./images/grafana_mysql_details.png)

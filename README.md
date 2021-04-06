@@ -30,6 +30,7 @@ Change the current directory to the git-cloned application code location on your
 cd face_counter
 ```
 Execute below command:
+
     ```
     sudo make my-app
     ```
@@ -60,7 +61,7 @@ Login using below credentials:
     password: admin
     ```
 
-#Add datasource
+## Add datasource
 
 Click on Datasources as shown in below screenshot:
 
@@ -73,13 +74,9 @@ Click on "Add Datasource" and select "MySQL"
 Provide the details as shown in below screenshot:
 
 Name: BOOKINFO
-
 HOST: db:3306
-
 Database: BOOKINFO
-
 User: surya
-
 password: admin
 
 
@@ -87,7 +84,7 @@ password: admin
 
 And click on "Save and test"
 
-##Add Dashboard
+## Add Dashboard
 
 In the left panel click on "+" symbol and select import
 

@@ -9,10 +9,10 @@ OS: Ubuntu:18.04
 
 ## Introduction
 
-This application count the number of faces in each frames and displays the total count of faces along with the video stream on grafana dashboard
+This application count the total number of faces and displays the total count of faces along with the video stream on grafana dashboard
 
 ## How it Works
-- The application uses haar cascade face detection model to detect faces and take input from camera. It updates the count of faces for each frame to MySQL database and the final visualization can be seen on Grafana dashboard
+- The application uses haar cascade face detection model to detect faces and take input from camera. It updates the change in count of faces for each frame to MySQL database and the final visualization can be seen on Grafana dashboard
 
 ## Setup
 ### Get the code

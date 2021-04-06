@@ -38,11 +38,11 @@ Execute below command:
 Once all the containers are created check logs for grafana and mysql containers on seperate terminal wondows to make sure they are ready to take connections
 
     ```
-    docker logs -f docker_grafana_1
+    docker logs -f face_counter_grafana_1
     ```
 
     ```
-    docker logs -f docker_db_1
+    docker logs -f face_counter_db_1
     ```
 
 Verify that grafana and mysql container are ready to take connections as shown in below screenshots
